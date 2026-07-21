@@ -86,10 +86,11 @@ Chapters are added here as they are written.
 | #  | File                        | Title        | Status      |
 |----|-----------------------------|--------------|-------------|
 | 00 | `docs/00-roadmap.md`        | Roadmap      | Living doc  |
-| 01 | *(to be written on request)*| Introduction | Not written |
+| 01 | `docs/01-introduction.md`   | Introduction | Written     |
+| 02 | *(to be written on request)*| —            | Not written |
 
-> No chapter beyond this roadmap has been written yet. Request Chapter 01 when you are
-> ready to begin.
+> Chapter 01 is written. Request the next chapter when you have worked through its
+> milestone and are ready to begin implementing Version Zero.
 
 ## How to Use This Guide
 
@@ -100,8 +101,10 @@ Chapters are added here as they are written.
 
 ## Project Status
 
-- **Phase:** Scaffolding complete. No implementation, no chapters written yet.
+- **Phase:** Foundations. Chapter 01 (Introduction) written; vocabulary and mental
+  model established. No queue implementation yet (by design).
 - **Repository:** Documentation skeleton in place (`README.md`, `docs/`, `adr/`,
-  `design-process/`).
+  `design-process/`), plus the first narrative chapter (`docs/01-introduction.md`).
 - **Code:** Untouched starter binary only.
-- **Next step:** Request Chapter 01 (Introduction).
+- **Next step:** Work through the Chapter 01 milestone (glossary, scope statement,
+  first ADR, defensible Version Zero description), then request the next chapter.
