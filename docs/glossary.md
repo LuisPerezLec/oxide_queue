@@ -9,6 +9,6 @@
 * **Broker**  
   An actor responsible for managing the task collection and providing them to workers.
 * **Worker**  
-  An actor responsible for executing the tasks that it recieves.
+  An actor responsible for executing the tasks that it receives.
 * **Result backend**  
   A representation (persistent or not) of the results obtained from the result of workers executing tasks

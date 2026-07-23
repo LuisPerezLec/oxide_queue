@@ -11,12 +11,27 @@ This file represents the scope and limitations if the Version Zero.
 
 ## Decision
 
-We will start the project with a single thread in memory process, that will make use of a FIFO data structure, and will be limited to creating and running tasks defined on the binary.
+For version zero, we are not aiming to provide a library instance (no database connections).
+We will model a Task struct, with some fields (including one for the task status, e.g.: Done, Pending, Failed), and the trait that will allow for homogenization of the tasks.
+
+```
+  ┌-----------------┐    Push      ┌----------------┐    Pop    ┌---------------┐
+  | Producer living |  ──────────> |  List storing  | --------> | Execution     | 
+  | inside the bin  |              |    dyn type    |           | (worker)      |
+  | crate using lib |              |living in binary|           | inside binary |
+  | types and traits|              └----------------┘           └---------------┘
+  └-----------------┘                                                   |
+                                                                        v
+                                                                ┌---------------┐
+                                  Posible network cut --------> | Future Result |
+                                                                |    backend    |
+                                                                └---------------┘
+```
 
 ## Alternatives Considered
 
-- **Alternative A** — Start distributed; Starting with a distributed system would end in bigger efforts on debugging insfrastructure instead of learning the queue's shape.
-- **Alternative B** — Start with a database; Starting with a persistent database would end in bigger efforts on debugging insfrastructure instead of learning the queue's shape.
+- **Alternative A** — Start distributed; Starting with a distributed system would end in bigger efforts on debugging infrastructure instead of learning the queue's shape.
+- **Alternative B** — Start with a database; Starting with a persistent database would end in bigger efforts on debugging infrastructure instead of learning the queue's shape.
 
 ## Consequences
 
@@ -30,7 +45,7 @@ We will start the project with a single thread in memory process, that will make
 
 ### Neutral / Follow-ups
 
-- Codificate Version Zero project
+- Codify Version Zero project
 
 ## References
 
