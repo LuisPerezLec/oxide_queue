@@ -322,12 +322,12 @@ several are documentation, not code, and that's the point.
 
 You have completed this chapter's milestone when:
 
-- [ ] `docs/glossary.md` exists and defines the core roles in your words.
-- [ ] A scope statement exists (will / will-not).
-- [ ] You have an ADR recording the single-process, in-memory starting point.
-- [ ] You can explain out loud, without notes, the path a task takes from producer to
+- [x] `docs/glossary.md` exists and defines the core roles in your words.
+- [x] A scope statement exists (will / will-not).
+- [x] You have an ADR recording the single-process, in-memory starting point.
+- [x] You can explain out loud, without notes, the path a task takes from producer to
       execution in Version Zero.
-- [ ] You have *not* written any queue implementation code yet — and you understand
+- [x] You have *not* written any queue implementation code yet — and you understand
       why that's the correct state to be in.
 
 There is intentionally **no implementation milestone** this chapter. The deliverables
@@ -453,14 +453,14 @@ baseline every future decision will be measured against.
 
 ## Knowledge Checklist
 
-- [ ] I can explain what a task queue is and the problem it solves.
-- [ ] I can name and define producer, queue, broker, worker, and result backend.
-- [ ] I can explain temporal decoupling — why hand work off instead of doing it
+- [x] I can explain what a task queue is and the problem it solves.
+- [x] I can name and define producer, queue, broker, worker, and result backend.
+- [x] I can explain temporal decoupling — why hand work off instead of doing it
       inline.
-- [ ] I can explain why "distributed" introduces the "was it lost or did it succeed?"
+- [x] I can explain why "distributed" introduces the "was it lost or did it succeed?"
       ambiguity, and why we defer distribution.
-- [ ] I understand why Version Zero is intentionally a "list plus a loop."
-- [ ] I understand what `VecDeque::pop_front` returning `Option` is asking me to
+- [x] I understand why Version Zero is intentionally a "list plus a loop."
+- [x] I understand what `VecDeque::pop_front` returning `Option` is asking me to
       decide.
 
 ## Suggested Commits
