@@ -331,16 +331,16 @@ These are yours. The mentor will not solve them. Prefer small, frequent commits.
 
 You have completed this chapter's milestone when:
 
-- [ ] Your project builds with a **library crate** and a **binary crate**, the binary
+- [x] Your project builds with a **library crate** and a **binary crate**, the binary
       using the library.
-- [ ] A `Task` representation and a status type exist in the library, and you can
+- [x] A `Task` representation and a status type exist in the library, and you can
       point to one illegal state you made unrepresentable.
-- [ ] A minimal FIFO queue exists with exactly the operations Version Zero needs.
-- [ ] The binary submits several heterogeneous tasks and runs them in FIFO order,
+- [x] A minimal FIFO queue exists with exactly the operations Version Zero needs.
+- [x] The binary submits several heterogeneous tasks and runs them in FIFO order,
       producing observable output.
-- [ ] Tests assert on observable behavior (order, success/failure, empty-queue
+- [x] Tests assert on observable behavior (order, success/failure, empty-queue
       handling).
-- [ ] An ADR records your enum-vs-trait-object decision and its deciding criterion.
+- [x] An ADR records your enum-vs-trait-object decision and its deciding criterion.
 
 This is the **first chapter with an implementation milestone.** It is intentionally
 small: a correct "list plus a loop" with well-chosen types, nothing more.
@@ -456,14 +456,14 @@ Record the significant ones as ADRs.
 
 ## Knowledge Checklist
 
-- [ ] I can state the single operation a worker needs from any task.
-- [ ] I can explain when an `enum` beats trait objects and vice versa, in terms of
+- [x] I can state the single operation a worker needs from any task.
+- [x] I can explain when an `enum` beats trait objects and vice versa, in terms of
       openness, exhaustiveness, and cost.
-- [ ] I can explain what `Box<dyn Task>` costs at runtime and why it's acceptable
+- [x] I can explain what `Box<dyn Task>` costs at runtime and why it's acceptable
       here (if I chose it).
-- [ ] I made at least one illegal task state unrepresentable and can name it.
-- [ ] I can justify the library/binary split in terms of a future second program.
-- [ ] I chose deliberate empty-queue semantics and know why they're temporary.
+- [x] I made at least one illegal task state unrepresentable and can name it.
+- [x] I can justify the library/binary split in terms of a future second program.
+- [x] I chose deliberate empty-queue semantics and know why they're temporary.
 
 ## Suggested Commits
 
